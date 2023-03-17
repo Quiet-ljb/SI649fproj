@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-from vega_datasets import data
 
-map_url = data.us_10m.url
+
+map_url = 'https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json'
 states = alt.topo_feature(map_url, 'states')
 state_id = pd.read_csv('https://gist.githubusercontent.com/dantonnoriega/bf1acd2290e15b91e6710b6fd3be0a53/raw/11d15233327c8080c9646c7e1f23052659db251d/us-state-ansi-fips.csv')
 pwd = pd.read_csv('map_data.csv')
